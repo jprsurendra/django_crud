@@ -3,11 +3,11 @@ from books import views
 
 urlpatterns = [
     url(r'^$', views.BookList.as_view(), name='book_list'),
-    url(r'^view/<int:pk>$', views.BookView.as_view(), name='book_view'),
+    url(r'^view/<int:pk>', views.BookView.as_view(), name='book_view'),
     url(r'^new$', views.BookCreate.as_view(), name='book_new'),
-    url(r'^view/<int:pk>$', views.BookView.as_view(), name='book_view'),
-    url(r'^edit/<int:pk>$', views.BookUpdate.as_view(), name='book_edit'),
-    url(r'^delete/<int:pk>$', views.BookDelete.as_view(), name='book_delete'),
+    # url(r'^view/<int:pk>', views.BookView.as_view(), name='book_view'),
+    url(r'^edit/<int:pk>', views.BookUpdate.as_view(), name='book_edit'),
+    url(r'^delete/<int:pk>', views.BookDelete.as_view(), name='book_delete'),
 ]
 '''
 url(r'^upload-documents/(?P<pk>\d{0,50})/$', UploadDocumentView.as_view(), name='upload docuemnt'),

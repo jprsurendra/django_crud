@@ -3,7 +3,7 @@ from books import views
 
 urlpatterns = [
     url(r'^$', views.BookList.as_view(), name='book_list'),
-    url(r'^view/<int:pk>', views.BookView.as_view(), name='book_view'),
+    url(r'view/<int:pk>', views.BookView.as_view(), name='book_view'),
     url(r'^new$', views.BookCreate.as_view(), name='book_new'),
     # url(r'^view/<int:pk>', views.BookView.as_view(), name='book_view'),
     url(r'^edit/<int:pk>', views.BookUpdate.as_view(), name='book_edit'),

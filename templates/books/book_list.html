@@ -18,9 +18,9 @@
             <td>{{ book.name }}</td>
             <td>{{ book.pages }}</td>
 
-            <td><a href="/books/view/{{ book.id }}">view</a></td>
-            <td><a href="edit/{{ book.id }}">edit</a></td>
-            <td><a href="delete/{{ book.id }}">delete</a></td>
+            <td align="center"><a href="view/{{ book.id }}">View</a></td>
+            <td align="center"><a href="edit/{{ book.id }}">Edit</a></td>
+            <td align="center"><a href="delete/{{ book.id }}">Delete</a></td>
             </tr>
         {% endfor %}
     </tbody>

@@ -1,0 +1,31 @@
+{% include "books/header.html" %}
+
+<h1>Books Listing</h1>
+
+<table width="600">
+    <thead>
+        <tr>
+        <th width="50%">Name</th>
+        <th width="20%">Pages</th>
+        <th width="10%">View</th>
+        <th width="10%">Edit</th>
+        <th width="10%">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in object_list %}
+            <tr>
+            <td>{{ book.name }}</td>
+            <td>{{ book.pages }} {{ book.id }}</td>
+
+            <td><a href="/books/view/{{ book.id }}">view</a></td>
+            <td><a href="edit/{{ book.id }}">edit</a></td>
+            <td><a href="delete/{{ book.id }}">delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% include "books/footer_for_listing.html" %}

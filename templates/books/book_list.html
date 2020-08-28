@@ -16,7 +16,7 @@
         {% for book in object_list %}
             <tr>
             <td>{{ book.name }}</td>
-            <td>{{ book.pages }} {{ book.id }}</td>
+            <td>{{ book.pages }}</td>
 
             <td><a href="/books/view/{{ book.id }}">view</a></td>
             <td><a href="edit/{{ book.id }}">edit</a></td>

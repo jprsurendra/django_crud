@@ -1,0 +1,161 @@
+/*iframe[seamless] {
+    border: none;
+}*/
+body{
+	font-family: sans-serif;
+	background: #ececec;
+	margin: 0;
+	color: #333;
+	font-size: 12px;
+	padding-bottom: 50px;
+}
+.topbar{
+	background: #000077;
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+}
+.topbar > h3{
+	margin: 0;
+}
+.side-menu > a{
+	display: block;
+    width: 130px;
+    text-decoration: none;
+    background: #6d6d6d;
+    height: 15px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.side-menu > a:hover{
+    background: #4c4c4c;
+    font-weight: bold;
+}
+.wrapper{
+	padding: 0 30px;
+}
+.menu-wrapper{
+	float: left;
+	width: 20%;
+	padding-top: 20px;
+	padding-left: 5%;
+}
+.form-wrapper{
+	float: left;
+	width: 70%;
+	padding-top: 26px;
+}
+.form-wrapper > h2{
+	font-weight: normal;
+	margin-top: 0;
+	font-size: 20px;
+}
+.form-element{
+	margin-top: 10px;
+}
+.book-form .form-element label{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	padding-left: 3px;
+	color: #007;
+}
+.book-form .form-element input[type=text],
+.book-form .form-element select,
+.book-form .form-element textarea{
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.book-form .form-element input[type=text],
+.book-form .form-element select{
+	height: 30px;
+}
+.book-form .form-element input[type=radio],
+.book-form .form-element input[type=checkbox]{
+	margin-top: 0;
+}
+.book-form .form-element input[type=radio] + span,
+.book-form .form-element input[type=checkbox] + span{
+	margin-right: 15px;
+	vertical-align: top;
+}
+.book-form input[type=button]{
+	height: 30px;
+    padding: 8px 35px;
+    border: 1px solid #007;
+    border-radius: 5px;
+    background: #007;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.mt-20{
+	margin-top: 20px !important;
+}
+.mb-10{
+	margin-bottom: 10px !important;
+}
+.table{
+	width: 100%;
+    text-align: left;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.table th, .table td{
+	padding: 8px 10px;
+	border: 1px solid #a2a2a2;
+	background: #fff;
+}
+.table th{
+	background: #6d6d6d;
+    color: #fff;
+}
+.pagination{
+	float: right;
+	margin-bottom: 50px;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+.pagination span{
+	width: 30px;
+    height: 30px;
+    display: table-cell;
+    background: #ccc;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #6d6d6d;
+    font-weight: bold;    
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.pagination span.active{
+	background: #000077;
+	color: #fff;
+}
+
+.bottombar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #000077;
+  color: #fff;
+	padding: 18px 0;
+	/*padding-bottom: 15px;*/
+  text-align: right;
+}
+
+.bottombar > h3{
+	margin: 0;
+}

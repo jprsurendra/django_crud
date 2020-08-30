@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- <iframe src="side-menu.html" seamless></iframe> -->
+	<div class="topbar">
+		<h3>BOOK LIBRARY</h3>
+	</div>
+	<div class="wrapper">		
+		<div class="menu-wrapper">
+			<!-- menu start -->
+			<div class="side-menu">
+				<a href="#">Home</a>
+				<a href="#">Books Gallery</a>
+				<a href="#">Authors</a>
+				<a href="#">Menu 4</a>
+				<a href="#">Menu 5</a>
+				<a href="#">Menu 6</a>
+				<a href="#">Menu 7</a>
+				<a href="#">Menu 8</a>
+				<a href="#">Menu 9</a>
+				<a href="#">Menu 10</a>
+			</div>
+			<!-- menu end -->
+		</div>
+		<div class="form-wrapper">
+			<h2>Create Book</h2>
+
+			<form class="book-form">
+				
+				<div class="form-element">
+					<label>Book Name</label>
+					<input id="book-name" type="text" name="" placeholder="Book Name">
+				</div>
+
+				<div class="form-element">
+					<label>Book Author</label>
+					<input id="book-auther" type="text" name="" placeholder="Book Author">
+				</div>
+
+				<div class="form-element">
+					<label>Book Type</label>
+					<select id="book-type">
+						<option>Please Select</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+						<option>Option 4</option>
+					</select>
+				</div>
+
+				<div class="form-element">
+					<label>Book Theme</label>
+					<input type="radio" name="book-theme"><span>Historical</span>
+					<input type="radio" name="book-theme"><span>Comedy</span>
+					<input type="radio" name="book-theme"><span>Others</span>
+				</div>
+
+				<div class="form-element">
+					<label>Book Check</label>
+					<input type="checkbox" name=""><span>Checkbox 1</span>
+					<input type="checkbox" name=""><span>Checkbox 2</span>
+					<input type="checkbox" name=""><span>Checkbox 3</span>
+					<input type="checkbox" name=""><span>Checkbox 4</span>
+				</div>
+
+				<div class="form-element">
+					<label>Book Description</label>
+					<textarea placeholder="Description Here" rows="5"></textarea>
+				</div>
+
+				<input type="button" name="" value="Submit" onclick="submit_book_detail()">
+
+			</form>
+
+
+			<h2 class="mt-20 mb-10">Book History</h2>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Book Name</th>
+						<th>Book Author</th>
+						<th>Book Type</th>
+						<th>Book Theme</th>
+						<th>Book Check</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Book 1</td>
+						<td>J. Jones</td>
+						<td>Option 2</td>
+						<td>Historical</td>
+						<td>Check 1</td>
+					</tr>
+					<tr>
+						<td>Book 1</td>
+						<td>J. Jones</td>
+						<td>Option 2</td>
+						<td>Historical</td>
+						<td>Check 1</td>
+					</tr>
+					<tr>
+						<td>Book 1</td>
+						<td>J. Jones</td>
+						<td>Option 2</td>
+						<td>Historical</td>
+						<td>Check 1</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="pagination">
+				<span><</span>
+				<span class="active">1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>></span>
+			</div>
+
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+	function submit_book_detail(){
+		alert('data submited');
+	}
+</script>
+
+</body>
+</html>

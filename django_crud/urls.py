@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
+    url(r'^generic_views/', include('app_generic_views.urls')),
     url(r'^books/', include('books.urls')),
     # url(r'^gisapi/', include('apis.gisapp.urls', namespace='gis')),
     url(r'^admin/', admin.site.urls),

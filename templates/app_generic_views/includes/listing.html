@@ -1,4 +1,4 @@
-<h2 class="mt-20 mb-10">{{ title }}</h2>
+<h2 class="mb-10">{{ title }}</h2>
 
 <table class="table">
     <thead>
@@ -13,13 +13,13 @@
     <tbody>
         {% for book in object_list %}
         <tr>
-            <td>{{ book.name }}</td>
+            <td><b>{{ book.name }}</b></td>
             <td>{{ book.pages }}</td>
             <td>Option 2</td>
             <td>Historical</td>
-            <td><a href="view/{{ book.id }}">View</a>
-                <a href="edit/{{ book.id }}">Edit</a>
-                <a href="delete/{{ book.id }}">Delete</a></td>
+            <td><a class="mr-5" href="view/{{ book.id }}">View</a>
+                <a class="mr-5" href="edit/{{ book.id }}">Edit</a>
+                <a class="mr-5" href="delete/{{ book.id }}">Delete</a></td>
         </tr>
         {% endfor %}
     </tbody>

@@ -1,47 +1,84 @@
 <h2>{{ title }}</h2>
 <form class="book-form">
 
-    <div class="form-element">
-        <label>Book Name</label>
-        <input id="book-name" type="text" name="" placeholder="Book Name">
-    </div>
+    <div style="width: 65%; float: left;">
+        <div class="form-element">
+            <label>Book Name</label>
+            <input id="book-name" type="text" name="" placeholder="Book Name">
+        </div>
 
-    <div class="form-element">
-        <label>Book Author</label>
-        <input id="book-auther" type="text" name="" placeholder="Book Author">
-    </div>
+        <div class="form-element">
+            <label>Publisher</label>
+            <input id="book-auther" type="text" name="" placeholder="Book Author">
+        </div>
 
-    <div class="form-element">
-        <label>Book Category</label>
-        <select id="book-type">
-            <option>Please Select</option>
-            {% for category in BooksCategories %}
-                <option value="{{ category.id }}">{{ category.category_name}}</option>
-            {% endfor %}
-        </select>
-    </div>
+        <div class="form-element">
+            <label>Authors</label>
+            <select id="book-type" multiple style="height: 150px">
+                {% for category in BooksCategories %}
+                    <option value="{{ category.id }}">{{ category.category_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-    <div class="form-element">
-        <label>Book Theme</label>
-        <input type="radio" name="book-theme"><span>Historical</span>
-        <input type="radio" name="book-theme"><span>Comedy</span>
-        <input type="radio" name="book-theme"><span>Others</span>
-    </div>
+        <div class="form-element">
+            <label>Book Category</label>
+            <select id="book-type">
+                <option>Please Select</option>
+                {% for category in BooksCategories %}
+                    <option value="{{ category.id }}">{{ category.category_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-    <div class="form-element">
-        <label>Book Check</label>
-        <input type="checkbox" name=""><span>Checkbox 1</span>
-        <input type="checkbox" name=""><span>Checkbox 2</span>
-        <input type="checkbox" name=""><span>Checkbox 3</span>
-        <input type="checkbox" name=""><span>Checkbox 4</span>
-    </div>
+        <div class="form-element">
+            <label>Book available in language</label>
+            <input type="radio" name="book-theme"><span>Hindi</span>
+            <input type="radio" name="book-theme"><span>English</span>
+            <input type="radio" name="book-theme"><span>Other: </span>
+            <input style="width: 200px; display: inline; margin-top: -7px;" id="book-name" type="text" name="" placeholder="Other Language">
+        </div>
 
+        <div class="form-element">
+            <label>Book availability</label>
+            <input type="checkbox" name=""><span>Online Reading</span>
+            <input type="checkbox" name=""><span>In Library</span>
+            <input type="checkbox" name=""><span>On Rent</span>
+            <input type="checkbox" name=""><span>For Sell</span>
+        </div>
+
+    </div>
+    <div style="width: 35%; float: left; padding: 30px 0 10px 30px; box-sizing: border-box;">
+        <div class="image-wrapper">
+            <img src="/static/images/dummy_img.jpg" id="uploaded-img">
+        </div>
+        <div class="mt-20" style="text-align: center;">            
+            <label class="upload-file" for="upload_img" >Upload Book Image</label>
+            <input type="file" name="" id="upload_img" style="display: none;" onchange="readURL(this);">
+        </div>
+    </div>
+    <div style="clear: both;"></div>
     <div class="form-element">
         <label>Book Description</label>
-        <textarea placeholder="Description Here" rows="5"></textarea>
+        <textarea placeholder="Description Here" rows="7"></textarea>
     </div>
 
     <input type="button" name="" value="Submit" onclick="submit_book_detail()">
 
 </form>
 
+
+<script type="text/javascript">
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                  // alert(1);
+                    document.getElementById('uploaded-img').setAttribute("src", e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
